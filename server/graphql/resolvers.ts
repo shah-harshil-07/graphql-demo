@@ -41,6 +41,12 @@ const rootValue = {
                 book.author.toLowerCase().includes(query);
         });
     },
+    addBook: ({ book }: { book: Book }) => {
+        console.log('book => ', book);
+        books.push(book);
+        console.log('books => ', books);
+        return book;
+    },
 };
 
 export default rootValue;
